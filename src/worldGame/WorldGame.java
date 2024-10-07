@@ -27,7 +27,7 @@ public class WorldGame {
 
     private static void generateData() {
         for (int i = 0; i < countries.length; i++) {
-
+            //
         }
     }
 
