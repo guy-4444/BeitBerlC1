@@ -1,5 +1,6 @@
-### H3
+### H4
 
-1. scan 4 countries
-2. insert to countries array
-3. print all countries
+1. add more 6 countries
+2. continent get
+3. build pro game - random logic
+"is Israel in __Europe__? (1/0)"

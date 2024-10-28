@@ -1,38 +1,64 @@
 package worldGame;
 
+import java.util.Scanner;
+
 public class WorldGame {
 
-    private static Country[] countries = new Country[4];
+    private static final String[] CONTINENTS = new String[] {
+            "Africa",
+            "Asia",
+            "Europe",
+            "North America",
+            "Oceania",
+            "South America",
+    };
+    private static Country[] countries;
 
     public static void start() {
         System.out.println("▧ ▧ ▧ ▧ ▧ Welcome To World Game App ▧ ▧ ▧ ▧ ▧");
 
-        Country c1 = new Country();
-        c1.name = "Israel";
-        c1.pop = 10_000_000;
-
-        Country c2 = new Country();
-        c2.name = "USA";
-        c2.pop = 350_000_001;
-
-        System.out.println(c1.name + " - " + c1.pop);
-        System.out.println(c2.name + " - " + c2.pop);
+        countries = DataManager.generateCountriesArray();
 
 
-        generateData();
-        printData();
+        //printAllCountries();
+
+//        startNewGame();
+        startNewProGame();
 
         System.out.println("▧ ▧ ▧ ▧ ▧ Game Over ▧ ▧ ▧ ▧ ▧");
     }
 
-    private static void generateData() {
+    private static void startNewProGame() {
+        System.out.println("- - Game Started - -");
+
+    }
+
+    private static void startNewGame() {
+        Scanner scanner = new Scanner(System.in);
+        int score = 0;
+
+        System.out.println("- - Game Started - -");
+
         for (int i = 0; i < countries.length; i++) {
-            //
+            System.out.println((i + 1) + ". is " + countries[i].getName() + " an island? (enter 1 / 0)");
+            int answer = scanner.nextInt();
+
+            if ((countries[i].isIsland() && answer == 1) || (!countries[i].isIsland() && answer == 0)) {
+                System.out.println("Correct");
+                score++;
+            } else {
+                System.out.println("Wrong");
+            }
+        }
+
+        System.out.println("Your score  " + score + "/" + countries.length);
+
+    }
+
+    private static void printAllCountries() {
+        for (int i = 0; i < countries.length; i++) {
+            System.out.println((i + 1) + ". " +  countries[i]);
         }
     }
 
-
-    private static void printData() {
-        // 1. Israel 10000000
-    }
 }
