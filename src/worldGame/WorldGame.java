@@ -5,7 +5,7 @@ public class WorldGame {
     private static Country[] countries = new Country[4];
 
     public static void start() {
-        System.out.println("▧ ▧ ▧ ▧ ▧ World Game App ▧ ▧ ▧ ▧ ▧");
+        System.out.println("▧ ▧ ▧ ▧ ▧ Welcome To World Game App ▧ ▧ ▧ ▧ ▧");
 
         Country c1 = new Country();
         c1.name = "Israel";
