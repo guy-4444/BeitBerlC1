@@ -1,6 +1,17 @@
-### H4
+### HomeWork:
 
-1. add more 6 countries
-2. continent get
-3. build pro game - random logic
-"is Israel in __Europe__? (1/0)"
+
+build game logic:
+
+"enter two countries? (1, 0)"
+
+function a:
+איפה יש יותר בוגרים.
+
+function b:
+get country name, price
+
+double amount = calculate("Israel", 100);
+350 ש״ח
+
+
