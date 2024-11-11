@@ -9,10 +9,9 @@ public class Country {
     private long pop;
     private boolean isIsland;
     private double adultPercent;
-    private String currencyName;
-    private String currencySymbol;
+    private Currency currency;
 
-    public Country(String name, String continent, String capital, long area, long pop, boolean isIsland, double adultPercent, String currencySymbol, String currencyName) {
+    public Country(String name, String continent, String capital, long area, long pop, boolean isIsland, double adultPercent, Currency currency) {
         this.name = name;
         this.continent = continent;
         this.capital = capital;
@@ -20,8 +19,7 @@ public class Country {
         this.pop = pop;
         this.isIsland = isIsland;
         this.adultPercent = adultPercent;
-        this.currencySymbol = currencySymbol;
-        this.currencyName = currencyName;
+        this.currency = currency;
     }
 
     public String getName() {
@@ -80,20 +78,12 @@ public class Country {
         this.adultPercent = adultPercent;
     }
 
-    public String getCurrencyName() {
-        return currencyName;
+    public Currency getCurrency() {
+        return currency;
     }
 
-    public void setCurrencyName(String currencyName) {
-        this.currencyName = currencyName;
-    }
-
-    public String getCurrencySymbol() {
-        return currencySymbol;
-    }
-
-    public void setCurrencySymbol(String currencySymbol) {
-        this.currencySymbol = currencySymbol;
+    public void setCurrency(Currency currency) {
+        this.currency = currency;
     }
 }
 
