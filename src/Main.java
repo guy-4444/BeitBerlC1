@@ -8,7 +8,7 @@ import zoo.ZooMain;
 public class Main {
 
     public static void main(String[] args) {
-        Exercise1Main.start();
+        StringMain.start();
     }
 
 }

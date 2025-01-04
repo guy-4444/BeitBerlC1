@@ -31,6 +31,15 @@ public class Exercise1Main {
         getCoupon();
         printInvoice();
 
+        Smartphone s24 = new Smartphone("Samsung S24", 4000);
+        Smartphone s7 = new Smartphone("Samsung 7", 1000, Smartphone.CHARGING_PORT.MICRO_USB);
+        Smartphone ip4 = new Smartphone("iPhone 4", 2000, Smartphone.CHARGING_PORT.LIGHTNING);
+        Smartphone nokia101 = new Smartphone("Nokia 101", 100, Smartphone.CHARGING_PORT.NOKIA_SIZE_FIVE);
+
+        System.out.println(s24.buyCable2());
+        System.out.println(s7.buyCable2());
+        System.out.println(ip4.buyCable2());
+        System.out.println(nokia101.buyCable2());
     }
 
     private static void getOrder() {
