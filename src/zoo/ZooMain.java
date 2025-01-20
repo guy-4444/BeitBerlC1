@@ -7,6 +7,8 @@ public class ZooMain {
 
     public static void start() {
 
+        Eagle e = new Eagle("Zazzoo", 25);
+        Flyable e2 = new Eagle("Zazzoo", 25);
 
         ArrayList<Animal> animals = new ArrayList<>();
         animals.add(new Lion("Mufasa", 20));

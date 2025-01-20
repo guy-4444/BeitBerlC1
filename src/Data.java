@@ -2,13 +2,7 @@ import heritage.Rectangle;
 import heritage.Shape;
 import zoo.Car;
 
-import java.time.Instant;
-import java.time.ZoneId;
-import java.time.format.DateTimeFormatter;
-import java.util.Locale;
-import java.util.Random;
-
-public class Data {
+public abstract class Data {
 
 
     public static void start() {
@@ -106,7 +100,7 @@ public class Data {
     static class Human {
 
         static int numOfHumans = 10_000_000;
-        int age;
+        private int age;
 
         public int getAge() {
             return age;
@@ -116,4 +110,38 @@ public class Data {
             return numOfHumans;
         }
     }
+
+
+    public static class Father {
+
+    }
+    public static class Num extends Father {
+        int n;
+
+        public Num(int n) {
+            this.n = n;
+        }
+    }
+
+    public static void main() {
+        Num num = new Num(5);
+        pow(num.n);
+        pow(num);
+        pow(num.n);
+    }
+
+    public static void pow(int n) {
+        n = n * n;
+        System.out.println("Result: " + n);
+    }
+
+    public static void pow(Num num) {
+        num.n = num.n * num.n;
+        System.out.println("Result: " + num.n);
+    }
+
+    /**
+     * Result: 25
+     * Result: 25
+     */
 }
