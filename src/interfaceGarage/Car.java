@@ -17,8 +17,4 @@ public class Car extends Vehicle {
     public void fixed() {
         System.out.println("Car (" + getModel() + ") is fixed - " + NUM_OF_WHEELS + " wheels");
     }
-
-    public static Car build(Vehicle v) {
-
-    }
 }

@@ -6,12 +6,13 @@ import files.MyFileReader;
 import heritage.HeritageMain;
 import interfaceGarage.MainGarage;
 import stepDetector.StepDetectorMain;
+import ticTacToe.TicTacToeMain;
 import zoo.ZooMain;
 
 public class Main {
 
     public static void main(String[] args) {
-        StackQueueMain.start();
+        TicTacToeMain.start();
     }
 
 }
